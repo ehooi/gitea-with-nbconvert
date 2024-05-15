@@ -1,0 +1,4 @@
+FROM gitea/gitea:latest-rootless
+USER root
+RUN apk add --no-cache python3 py3-pip
+RUN pip3 --no-cache-dir install nbconvert
