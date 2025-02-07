@@ -1,5 +1,5 @@
-FROM gitea/gitea:latest-rootless
+FROM gitea/gitea:1.22.6-rootless
 USER root
 RUN apk add --no-cache python3 py3-pip
-RUN pip3 --no-cache-dir install nbconvert
+RUN pip3 install --no-cache-dir --break-system-packages nbconvert
 USER 1000:1000
